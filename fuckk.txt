@@ -1,0 +1,1 @@
+gbadisasm SonicBattle.gba -c disasm.cfg
