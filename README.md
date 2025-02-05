@@ -1,6 +1,6 @@
 # Sonic Battle (USA)
 
-### How to disassemble a ROM
+### How to disassemble a ROM - Copied from SA1 repo
 
 1. Load in Ghidra and analyse
 1. Copy out CSV functions list
