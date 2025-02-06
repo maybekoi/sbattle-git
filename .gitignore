@@ -71,3 +71,4 @@ reports
 ./maps
 *.4bpp
 *.8bpp
+/ignore

@@ -1,11 +1,18 @@
 # Sonic Battle (USA)
 
-### How to disassemble a ROM - Copied from SA1 repo
+This my attempt at a disassembly of Sonic Battle (USA)
 
-1. Load in Ghidra and analyse
-1. Copy out CSV functions list
-1. Run script to convert to a config file for gbadisasm
-1. Run disassembler with first pass
-1. Run a script to read over the assembly and find the areas which are not marked
-1. Feed these addresses into the config file and disassemble
-1. Keep repeating until no missing functions in the assembly
+As of right now it doesn't build and I get this error:
+
+```
+C:\devkitPro\devkitARM\bin\arm-none-eabi-objcopy.exe: sbattle.gba[EWRAM]: section has no contents
+make: *** [Makefile:76: sbattle.gba] Error 1
+```
+
+### Setting up the repository
+
+* You must have a copy of the Sonic Battle ROM named `baserom.gba` in the repository directory.
+
+* Install [**devkitARM**](http://devkitpro.org/wiki/Getting_Started/devkitARM).
+
+* You can then build sbattle using `make` in the MSYS environment provided with devkitARM.
