@@ -73,7 +73,7 @@ $(ELF): $(OBJS) $(LDSCRIPT)
 	$(LD) -T $(LDSCRIPT) -Map $(MAP) $(OBJS) tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a -o $@
 
 %.gba: %.elf
-	$(OBJCOPY) -O binary --pad-to 0x8400000 $< $@
+	$(OBJCOPY) -O binary --gap-fill 0xFF --pad-to 0x8400000 $< $@
 
 $(C_BUILDDIR)/%.o : $(C_SUBDIR)/%.c
 	$(CPP) $(CPPFLAGS) $< | $(CC1) $(CC1FLAGS) -o $(C_BUILDDIR)/$*.s
